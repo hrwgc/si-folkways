@@ -6,10 +6,15 @@
   <script src='http://api.tiles.mapbox.com/mapbox.js/v1.0.2/mapbox.js'></script>
   <script src="markercluster.js"></script>
   <script src="si_folk_points.js"></script>
+  <script src="filter.js"></script>
+  <script src="bootstrap.min.js"></script>
   <link href='http://api.tiles.mapbox.com/mapbox.js/v1.0.2/mapbox.css' rel='stylesheet' />
   <!--[if lte IE 8]>
     <link href='http://api.tiles.mapbox.com/mapbox.js/v1.0.2/mapbox.ie.css' rel='stylesheet' >
   <![endif]-->
+   <link href='bootstrap.min.css' rel='stylesheet' />
+   <link href='bootstrap-responsive.min.css' rel='stylesheet' />
+
    <link href='style.css' rel='stylesheet' />
 
   <title></title>
@@ -17,22 +22,28 @@
   <meta property="og:site_name" content="hrwgc">
   <meta name="twitter:url" content="http://hrwgc.github.io/si-folkways">
   <meta property="og:url" content="http://hrwgc.github.io/si-folkways">
-  <meta name="twitter:title" content="">
-  <meta property="og:title" content="">
-  <meta name="twitter:description" content="">
-  <meta property="og:description" content="">
-  <meta name="twitter:image" content="">
-  <meta property="og:image" content=""> 
+  <meta name="twitter:title" content="Smithsonian Folkways Catalogue Visualization">
+  <meta property="og:title" content="Smithsonian Folkways Catalogue Visualization">
+  <meta name="twitter:description" content="This map was created at the first annual National Day of Civic Hacking in Washington, D.C. Smithsonian Folkways Recordings partnered with three community volunteers to tackle the task of creating an engaging visualization of Smithsonian Folkways' music collection. Together, we explored various visualization platforms, customizations, search filters, and social media strategies that could display musical catalogue content. This demo provides a scalable map of the entire Smithsonian Folkways catalogue, as well as an overview of filters that may be used to micromanage the dataset to create a more customized browsing experience.">
+  <meta property="og:description" content="This map was created at the first annual National Day of Civic Hacking in Washington, D.C. Smithsonian Folkways Recordings partnered with three community volunteers to tackle the task of creating an engaging visualization of Smithsonian Folkways' music collection. Together, we explored various visualization platforms, customizations, search filters, and social media strategies that could display musical catalogue content. This demo provides a scalable map of the entire Smithsonian Folkways catalogue, as well as an overview of filters that may be used to micromanage the dataset to create a more customized browsing experience.">
+  <meta name="twitter:image" content="http://i.imgur.com/mjyNdKF.png">
+  <meta property="og:image" content="http://i.imgur.com/mjyNdKF.png"> 
   <meta name="twitter:card" content="summary_large_image">
 
  </head>
 <body>
     <div class='header'><h1>Smithsonian Folkways</h1></div>
-<div id='map-ui'>
-    <ul>
-        <li><a href='#' id='filter-folk'>American Folk</a></li>
-        <li><a href='#' class='active' id='filter-all'>Show all</a></li>
-    </ul>
+
+<div class='row'>
+ 
+  <div class='span-2'>
+   </div>
+<div class='span-4'>
+ <div id='map-ui'>
+</div>
+</div>
+<div class='span-2'></div>
+
 </div>
 <div id='map'></div>
 <script type='text/javascript' src='site.js'></script>

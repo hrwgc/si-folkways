@@ -11,66 +11,20 @@
     padding:3px;
     line-height: 20px;
    }
-
     #map { position:absolute; top:0px; bottom:0; width:100%; }
 
 .leaflet-top
 { top:80px;}
-    #map-ui {
-        position: absolute;
-        top: 80px;
-        right: 10px;
-        z-index: 100;
-    }
+ #map-ui {
 
-    #map-ui ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
+  z-index:9999;
+  position: absolute;
+  bottom:15px;
     }
-
-    #map-ui a {
-        font-size: 13px;
-        background: #FFF;
-        color: #3C4E5A;
-        display: block;
-        margin: 0;
-        padding: 0;
-        border: 1px solid #BBB;
-        border-bottom-width: 0;
-        min-width: 138px;
-        padding: 10px;
-        text-decoration: none;
-    }
-
-    #map-ui a:hover {
-        background: #ECF5FA;
-    }
-
-    #map-ui li:last-child a {
-        border-bottom-width: 1px;
-        -webkit-border-radius: 0 0 3px 3px;
-        border-radius: 0 0 3px 3px;
-    }
-
-    #map-ui li:first-child a {
-        -webkit-border-radius: 3px 3px 0 0;
-        border-radius: 3px 3px 0 0;
-    }
-
-    #map-ui a.active {
-        background: #3887BE;
-        border-color: #3887BE;
-        color: #FFF;
-    }
-
-/*.simarker {
-  background-color:rgb(250,255,252) ;
-  border:2px #fff;
+.popup ul {
+    list-style-type: none;
+    margin: 0 0 5px 5px
 }
-*/
-/* Marker clusters */
-
 .leaflet-cluster-anim .leaflet-marker-icon, .leaflet-cluster-anim .leaflet-marker-shadow {
     -webkit-transition: -webkit-transform 0.2s ease-out, opacity 0.2s ease-in;
     -moz-transition: -moz-transform 0.2s ease-out, opacity 0.2s ease-in;
@@ -78,11 +32,6 @@
     transition: transform 0.2s ease-out, opacity 0.2s ease-in;
 }
 
-/*
-rgba(88,83,64,1)    rgba(183,174,157,1)    rgba(250,255,252,1)    
-rgba(172,206,205,1)    rgba(138,21,27,1)    rgba(188,99,103,1)    
-
-*/
 .marker-cluster-small {
     background-color: rgb(88,83,64);
     background-color: rgba(88,83,64,.6);
@@ -128,3 +77,53 @@ rgba(172,206,205,1)    rgba(138,21,27,1)    rgba(188,99,103,1)
 .marker-cluster span {
     line-height: 30px;
 }
+
+.dropdown-menu {
+    max-height: 200px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+a.dropdown-toggle {
+    position: relative;
+}
+a.dropdown-toggle::before {
+    content: '';
+    display: inline-block;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #CCC;
+    border-bottom-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    bottom: -2px;
+    right: 7px;
+    display: none;
+}
+a.dropdown-toggle::after {
+    content: '';
+    display: inline-block;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid white;
+    position: absolute;
+    bottom: -2px;
+    right: 8px;
+    z-index: 1001;
+    display: none;
+}
+.open > a.dropdown-toggle::before,
+.open > a.dropdown-toggle::after {
+    display: block;
+}
+
+.int-label {
+  display: block;
+  background:rgba(20,20,20,.4);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 11px;
+  line-height: 14px;
+  color: inherit;
+  margin-bottom: 10px;
+  color: #fff;
+  padding:3px;
+  }
