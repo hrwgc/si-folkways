@@ -33,7 +33,7 @@ for ( var i = 0; i < geoJson.length; i++ ){
            })
     });
         
-     var popupContent = '<div class="popup"><a href="' + feature.properties.link + '"><h4>' + feature.properties.album_title 
+     var popupContent = '<div class="popup"><a href="' + feature.properties.link + '" target="_blank"><h4>' + feature.properties.album_title 
      + '</h4></a>'
      + '<ul><li><span class="int-label">Artist </span>' + feature.properties.album_artist +'</li>'
      + '<li><span class="int-label">Year </span>' + feature.properties.year_of_release +'</li>'
@@ -63,7 +63,7 @@ function filterMarkers(key,value){
         e.layer.unbindPopup();
 
         var feature = e.layer.feature;
-        var info =  '<div class="popup"><a href="' + feature.properties.link + '"><h4>' + feature.properties.album_title 
+        var info =  '<div class="popup"><a href="' + feature.properties.link  + '" target="_blank"><h4>' + feature.properties.album_title 
      + '</h4></a>'
      + '<ul><li><span class="int-label">Artist </span>' + feature.properties.album_artist +'</li>'
      + '<li><span class="int-label">Year </span>' + feature.properties.year_of_release +'</li>'
