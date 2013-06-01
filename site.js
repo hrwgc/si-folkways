@@ -60,31 +60,27 @@ function filterMarkers(key,value){
         });
         return false;
     map.markerLayer.on('click',function(e) {
-        e.layer.unbindPopup();
-
+    e.layer.unbindPopup();
         var feature = e.layer.feature;
-        var info =  '<div class="popup"><a href="' + feature.properties.link  + '" target="_blank"><h4>' + feature.properties.album_title 
+        var   popupContent =  '<div class="popup"><a href="' + feature.properties.link  + '" target="_blank"><h4>' + feature.properties.album_title 
      + '</h4></a>'
      + '<ul><li><span class="int-label">Artist </span>' + feature.properties.album_artist +'</li>'
      + '<li><span class="int-label">Year </span>' + feature.properties.year_of_release +'</li>'
           + '<li><span class="int-label">Country </span>' + feature.properties.countrys +'</li>'
           + '<li><span class="int-label">Genre </span>' + feature.properties.genres +'</li>'
           + '<li><span class="int-label">Label </span>' + feature.properties.source_labelarchive +'</li>'
+    + '</ul></div>';
 
-    + '</ul></div>'
-
-        document.getElementById('info').innerHTML = info;
-    });
-
-    // Clear the tooltip when map is clicked
-    map.on('click',function(e){
-        document.getElementById('info').innerHTML = '';
+      marker.bindPopup(popupContent,{
+            closeButton: false,
+            minWidth: 320
+        });
     });
     map.addLayer(markerLayer);
 
 
 
-markerLayer.on('click', function(e){
+map.markerLayer.on('click', function(e){
     var coords = e.layer._latlng;
     map.panTo([coords.lat, coords.lng]);
 });
