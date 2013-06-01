@@ -3,7 +3,7 @@
 function buildFilterUi(array,name){
     $('#map-ui').append('<div class="btn-group dropup"><button class="btn">' + name + '</button><button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button><ul class="dropdown-menu" id="' + name + '"></ul></div>');
     for ( var i = 0; i < array.length; i++ ){
-        $('#' + name).append('<li><a href="#' + array[i] + '" data-control="' + array[i] + '">' + array[i] + '</a></li>');
+        $('#' + name).append('<li><a href="#" data-control="' + array[i] + '">' + array[i] + '</a></li>');
     }
 }
 
