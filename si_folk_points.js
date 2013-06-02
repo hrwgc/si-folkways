@@ -5840,9 +5840,9 @@ for ( var i = 0; i < geoJson.length; i++ ){
  var title; var artists; var year; var country; var genres; var sources;
  if (feature.properties.album_title) {
  var title = '<a href="' + feature.properties.link + '" target="_blank"><h4>' + feature.properties.album_title
- + '</h4></a>'
+ + '</h4><img class="thumbnail" src="http://media.smithsonianfolkways.org/images/album_covers/SF270/' + feature.properties.catalog_no + '.jpg" /></a>'
  } else {
- var title = '<a href="' + feature.properties.link + '" target="_blank"><h4>No Title Available</h4></a>'
+ var title = '<a href="' + feature.properties.link + '" target="_blank"><h4>No Title Available</h4><img class="thumbnail" src="http://media.smithsonianfolkways.org/images/album_covers/SF270/' + feature.properties.catalog_no + '.jpg" /></a>'
  }
  if (feature.properties.album_artists) {
  var artists = '<li><span class="int-label">Artist </span>' + feature.properties.album_artists + '</li>'
@@ -5861,7 +5861,7 @@ for ( var i = 0; i < geoJson.length; i++ ){
  }
  feature.properties.popupContent = '<div class="popup">'
  + title
- + '<ul>'
+  + '<ul>'
  + artists + year + genres + country + sources
  + '</ul></div>'
  }

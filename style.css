@@ -1,5 +1,5 @@
    body { margin:0; padding:0; font-family:'Source Sans Pro', Helvetica, Arial, sans-serif; }
-
+a:hover{text-decoration: none}
    .header{
     position:absolute;
     top: 0;
@@ -118,12 +118,12 @@ a.dropdown-toggle::after {
 .int-label {
   display: block;
   background:#eee;
-  font-weight: 400;
-  text-transform: uppercase;
-  font-size: 14px;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 13px;
   line-height: 15px;
   color: inherit;
-  margin: 5px 0 10px;
+  margin: 5px 0 5px;
   color: #333;
   padding:3px;
   vertical-align: middle;
@@ -134,5 +134,13 @@ a.dropdown-toggle::after {
       width: 250px; background:#fff; color: #333;
       padding:20px;
       z-index: 999;
+      max-height: 100%;
+      bottom:50px;
+      overflow-y: auto;
+
   }
 .hide {opacity:0;}
+.thumbnail { max-width:100%; height:270px;}
+.popup h4 { margin-bottom: 0}
+.popup a,.popup a:hover { 
+text-decoration: none;padding-bottom:10px;}

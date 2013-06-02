@@ -81,6 +81,9 @@ function filterYears(key,minY,maxY){
                     document.getElementById('info').className = "";
                     var coords = e.latlng;
                     map.panTo([coords.lat, coords.lng]);
+                    $("img").error(function(){
+                        $(this).hide();
+                    });
 
                 })
             });
@@ -126,6 +129,9 @@ for ( var i = 0; i < geoJson.length; i++ ){
                 document.getElementById('info').className = "";
                 var coords = e.latlng;
                 map.panTo([coords.lat, coords.lng]);
+                $("img").error(function(){
+                    $(this).hide();
+                });
 
     })
     markers.addLayer(marker);
