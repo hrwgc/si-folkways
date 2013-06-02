@@ -5835,33 +5835,33 @@ var geoJson = [
 ,
 { "type": "Feature", "properties": { "catalog_no": "SFW45057", "source_labelarchive": "Smithsonian Folkways Recordings", "year_of_release": 2003, "album_title": "Singalong Songs From Scotland", "album_artists": "The Singing Kettle", "countrys": "Scotland", "culture_groups": "Scottish", "genres": "Children's; World", "instruments": null, "languages": "English", "keywords": "Folksong revival; Music--Juvenile", "link": "http:\/\/www.folkways.si.edu\/the-singing-kettle\/singalong-songs-from-scotland\/childrens-world\/music\/album\/smithsonian", "single_country": "United Kingdom" , "marker-shape": "pin", "marker-size": "small", "marker-symbol": "marker", "marker-color": "#585340"}, "geometry": { "type": "Point", "coordinates": [ -0.040164640560617, 51.689135751124773 ] } }
 ];
-for ( var i = 0; i < geoJson.length; i++ ){
- var feature = geoJson[i];
- var title; var artists; var year; var country; var genres; var sources;
- if (feature.properties.album_title) {
- var title = '<a href="' + feature.properties.link + '" target="_blank"><h4>' + feature.properties.album_title
- + '</h4><img class="thumbnail" src="http://media.smithsonianfolkways.org/images/album_covers/SF270/' + feature.properties.catalog_no + '.jpg" /></a>'
- } else {
- var title = '<a href="' + feature.properties.link + '" target="_blank"><h4>No Title Available</h4><img class="thumbnail" src="http://media.smithsonianfolkways.org/images/album_covers/SF270/' + feature.properties.catalog_no + '.jpg" /></a>'
- }
- if (feature.properties.album_artists) {
- var artists = '<li><span class="int-label">Artist </span>' + feature.properties.album_artists + '</li>'
- }
- if (feature.properties.year_of_release ) {
- var year = '<li><span class="int-label">Year </span>' + feature.properties.year_of_release +'</li>' 
- }
- if (feature.properties.year_of_release ) {
- var genres = '<li><span class="int-label">Genre </span>' + feature.properties.genres +'</li>'
- }
- if (feature.properties.year_of_release ) {
- var country = '<li><span class="int-label">Country </span>' + feature.properties.countrys +'</li>'
- }
- if (feature.properties.source_labelarchive ) {
- var sources = '<li><span class="int-label">Label </span>' + feature.properties.source_labelarchive +'</li>'
- }
- feature.properties.popupContent = '<div class="popup">'
- + title
-  + '<ul>'
- + artists + year + genres + country + sources
- + '</ul></div>'
- }
+for (var i = 0; i < geoJson.length; i++) {
+  var feature = geoJson[i];
+  var title;
+  var artists;
+  var year;
+  var country;
+  var genres;
+  var sources;
+  if (feature.properties.album_title) {
+    var title = '<a href="' + feature.properties.link + '" target="_blank"><h4>' + feature.properties.album_title + '</h4><img class="thumbnail" src="http://media.smithsonianfolkways.org/images/album_covers/SF270/' + feature.properties.catalog_no + '.jpg" /></a>'
+  } else {
+    var title = '<a href="' + feature.properties.link + '" target="_blank"><h4>No Title Available</h4><img class="thumbnail" src="http://media.smithsonianfolkways.org/images/album_covers/SF270/' + feature.properties.catalog_no + '.jpg" /></a>'
+  }
+  if (feature.properties.album_artists) {
+    var artists = '<li><span class="int-label">Artist </span>' + feature.properties.album_artists + '</li>'
+  }
+  if (feature.properties.year_of_release) {
+    var year = '<li><span class="int-label">Year </span>' + feature.properties.year_of_release + '</li>'
+  }
+  if (feature.properties.year_of_release) {
+    var genres = '<li><span class="int-label">Genre </span>' + feature.properties.genres + '</li>'
+  }
+  if (feature.properties.year_of_release) {
+    var country = '<li><span class="int-label">Country </span>' + feature.properties.countrys + '</li>'
+  }
+  if (feature.properties.source_labelarchive) {
+    var sources = '<li><span class="int-label">Label </span>' + feature.properties.source_labelarchive + '</li>'
+  }
+  feature.properties.popupContent = '<div class="popup">' + title + '<ul>' + artists + year + genres + country + sources + '</ul></div>'
+}
