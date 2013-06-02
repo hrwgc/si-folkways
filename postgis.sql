@@ -135,7 +135,7 @@ update si_folk set single_country = 'Congo, DRC' where  single_country = 'Congo 
 -- SELECT DropGeometryColumn ('public','si_folk','wkb_geometry');
 -- SELECT AddGeometryColumn ('public','si_folk','wkb_geometry',4326,'POINT',2, false);
 
-
+-- requires world_admin table, which has admin bounds for countries of the world. 
 
   UPDATE si_folk
     SET wkb_geometry = RandomPoint(a.wkb_geometry)
