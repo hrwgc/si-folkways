@@ -51,7 +51,9 @@ function filterMarkers(key, value) {
           document.getElementById('info').className = "";
           var coords = e.latlng;
           map.panTo([coords.lat, coords.lng]);
-
+           $("img").error(function () {
+              $(this).hide();
+          });
         })
     });
   map.fitBounds(filteredMarkers.getBounds())
